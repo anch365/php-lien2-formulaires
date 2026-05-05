@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercice 1</title>
+    <title>Exercice 5</title>
 </head>
+
 <body>
-    <form action="../process/user1.php" method="GET">
-        
+    <form action="../process/user3.php" method="GET">
+
         <?php if (isset($_GET["error"])) {
             $error = htmlspecialchars(trim($_GET["error"]));
             switch ($error) {
@@ -36,16 +38,26 @@
         <?php break;
             }
         } ?>
+
         <div>
-            <label for="prenom">Prénom :</label>
+            <select name="genre" id="genre">
+                <option value="Mr">Mr</option>
+                <option value="Mme">Mme</option>
+            </select>
+        </div>
+
+        <div><label for="nom">Nom :</label>
             <input type="text" placeholder="Ex: Anchoura" id="prenom" name="prenom" minlength="3" maxlength="50" required>
         </div>
         <div>
-            <label for="nom">Nom :</label>
+            <label for="prenom">Prénom :</label>
             <input type="text" placeholder="Ex: Abdou" id="nom" name="nom" minlength="3" maxlength="50" required>
         </div>
 
-        <button type="submit">Créer le client</button>
+        <button type="submit">Confirmer les données</button>
+
     </form>
+
 </body>
+
 </html>
