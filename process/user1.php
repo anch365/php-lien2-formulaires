@@ -42,3 +42,21 @@ if (strlen($prenom)< 3 || strlen($prenom)> 50) {
 // UNE FOIS TOUTE LE SECURITE EFFECTUE
 // On fait ce qu'on veut faire avec les données reçu, par exemple les mettre en base de données, en cookie ou en session ou les afficher
 ?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 3</title>
+</head>
+<body>
+  <h1>Exercice 3</h1>
+<h2>
+  Bienvenu dans notre site <br> 
+ <?= $nom ?> <?= $prenom ?>
+
+</h2>
+</body>
+</html>
