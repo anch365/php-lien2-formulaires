@@ -6,10 +6,10 @@
     <title>Exercice 1</title>
 </head>
 <body>
-    <form action="../process/user1.php" method="GET">
+    <form action="../process/user1.php" method="POST">
         
         <?php if (isset($_GET["error"])) {
-            $error = htmlspecialchars(trim($_GET["error"]));
+            $error = htmlspecialchars(trim($_POST["error"]));
             switch ($error) {
                 case 'bad-method': ?>
                     <p class="error">Méthode non autorisé</p>

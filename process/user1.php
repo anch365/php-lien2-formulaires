@@ -2,19 +2,19 @@
 
 // Première étape de sécurité : verifier la méthode
 if ($_SERVER['REQUEST_METHOD'] !== "GET") {
-    header("Location: ./process/user.php?error=bad-method");
+    header("Location: ../process/user1.php?error=bad-method");
     exit();
 }
 
 // Deuxieme étape de sécurité : verifier que la colonne voulue existe bien
 if (!isset($_GET["nom"]) || !isset($_GET["prenom"])) {
-     header("Location: ./process/user.php?error=bad-method");
+     header("Location: ../process/user1.php?error=bad-method");
     exit();
 }
 
 // Troisième étape de sécurité : verifier que la colonne voulue n'est pas vide
 if (empty($_GET["nom"]) || empty($_GET["prenom"])) {
-     header("Location: ./process/user.php?error=bad-method");
+     header("Location: ../process/user1.php?error=bad-method");
     exit();
 }
 
@@ -32,11 +32,11 @@ $prenom = htmlspecialchars(strip_tags(trim($_GET["prenom"])));
 // Par exemple ici on test que le nom reçu sera bien un nombre une chaine de caractère comprise entre 3 et 50: 
 
 if (strlen($nom)< 3 || strlen($nom)> 50) {
-  header("Location: ./process/user.php?error=bad-method");
+  header("Location: ../process/user1.php?error=bad-method");
     exit();
 }
 if (strlen($prenom)< 3 || strlen($prenom)> 50) {
-  header("Location: ./process/user.php?error=bad-method");
+  header("Location: ../process/user1.php?error=bad-method");
     exit();
 }
 // UNE FOIS TOUTE LE SECURITE EFFECTUE
