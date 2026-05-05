@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercice 1</title>
+    <title>Exercice 2</title>
 </head>
 <body>
-    <form action="../process/user1.php" method="POST">
+    <form action="../process/user2.php" method="POST">
         
-        <?php if (isset($_GET["error"])) {
+        <?php if (isset($_POST["error"])) {
             $error = htmlspecialchars(trim($_POST["error"]));
             switch ($error) {
                 case 'bad-method': ?>
@@ -38,11 +38,11 @@
         } ?>
         <div>
             <label for="prenom">Nom :</label>
-            <input type="text" placeholder="Ex: Anchoura" id="prenom" name="prenom" minlength="3" maxlength="50" required>
+            <input type="text" placeholder="Ex: Théo" id="prenom" name="prenom" minlength="3" maxlength="50" required>
         </div>
         <div>
             <label for="nom">Prénom :</label>
-            <input type="text" placeholder="Ex: Abdou" id="nom" name="nom" minlength="3" maxlength="50" required>
+            <input type="text" placeholder="Ex: Michel" id="nom" name="nom" minlength="3" maxlength="50" required>
         </div>
 
         <button type="submit">Créer le client</button>
