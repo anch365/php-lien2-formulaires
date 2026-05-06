@@ -8,10 +8,10 @@
 </head>
 
 <body>
-    <form action="../process/user3.php" method="GET">
+    <form enctype="multipart/form-data" action="../process/user5.php" method="POST">
 
-        <?php if (isset($_GET["error"])) {
-            $error = htmlspecialchars(trim($_GET["error"]));
+        <?php if (isset($_POST["error"])) {
+            $error = htmlspecialchars(trim($_POST["error"]));
             switch ($error) {
                 case 'bad-method': ?>
                     <p class="error">Méthode non autorisé</p>
@@ -43,16 +43,18 @@
             <select name="genre" id="genre">
                 <option value="Mr">Mr</option>
                 <option value="Mme">Mme</option>
-            </select>
+            </select><br> <br>
         </div>
 
         <div><label for="nom">Nom :</label>
-            <input type="text" placeholder="Ex: Anchoura" id="prenom" name="prenom" minlength="3" maxlength="50" required>
+            <input type="text" placeholder="Ex: Anchoura" id="prenom" name="prenom" minlength="3" maxlength="50" required> <br> <br>
         </div>
         <div>
             <label for="prenom">Prénom :</label>
-            <input type="text" placeholder="Ex: Abdou" id="nom" name="nom" minlength="3" maxlength="50" required>
+            <input type="text" placeholder="Ex: Abdou" id="nom" name="nom" minlength="3" maxlength="50" required> <br> <br>
         </div>
+
+        <input type="file" name="monfichier" id="monfichier"><br> <br>
 
         <button type="submit">Confirmer les données</button>
 
