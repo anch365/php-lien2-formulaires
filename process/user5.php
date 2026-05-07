@@ -90,11 +90,5 @@ if (!$uploadOk) {
     echo "<br> <br> Sorry, there was an error uploading your file. <br> <br>";
   }
 }
-
-$genre = $_POST['genre'];
-$nom = $_POST['nom'];
-$prenom = $_POST['prenom'];
 ?>
-
-<?= "$genre $nom $prenom"?>
 
